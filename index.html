@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angkringan Mantep | Nikmat & Hangat</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+    min-height:100vh;
+    background:linear-gradient(-45deg,#f6e2c7,#f3cba1,#e3b887,#f6e2c7);
+    background-size:400% 400%;
+    animation:gradientMove 15s ease infinite;
+    color:#3e2f1c;
+    overflow-x:hidden;
+}
+@keyframes gradientMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+nav h2{
+    font-weight:700;
+    letter-spacing:1px;
+    color:#8b4513;
+}
+nav span{color:#ff9f1c}
+nav a{
+    color:#3e2f1c;
+    text-decoration:none;
+    margin-left:28px;
+    font-weight:500;
+}
+
+/* ===== BLUR ===== */
+.blur{
+    position:absolute;
+    width:350px;
+    height:350px;
+    filter:blur(120px);
+    z-index:0;
+}
+.blur.one{
+    top:10%;
+    left:-100px;
+    background:rgba(255,159,28,0.35);
+}
+.blur.two{
+    bottom:10%;
+    right:-100px;
+    background:rgba(139,69,19,0.35);
+}
+
+/* ===== HERO ===== */
+.hero{
+    min-height:100vh;
+    padding:140px 8% 90px;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+.hero-content{
+    max-width:680px;
+    z-index:2;
+}
+.hero h1{
+    font-size:3.2rem;
+    line-height:1.2;
+    font-weight:700;
+}
+.hero h1 span{
+    color:#ff9f1c;
+}
+.hero p{
+    margin:28px 0 38px;
+    font-size:1.1rem;
+    opacity:.9;
+}
+
+/* ===== BUTTON ===== */
+.btn-primary{
+    display:inline-block;
+    background:linear-gradient(135deg,#ff9f1c,#ffb84d);
+    padding:16px 38px;
+    border-radius:50px;
+    color:#fff;
+    font-weight:700;
+    text-decoration:none;
+    letter-spacing:.5px;
+    box-shadow:0 0 25px rgba(255,159,28,.5);
+    transition:.35s;
+}
+.btn-primary:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 0 40px rgba(255,159,28,.7);
+}
+
+/* ===== SECTION ===== */
+.section{
+    padding:100px 8%;
+    position:relative;
+    z-index:2;
+}
+.section h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+.section h2 span{
+    color:#ff9f1c;
+}
+
+/* ===== GLASS CARD ===== */
+.glass-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+.glass-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border-radius:22px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,.25);
+    transition:.4s;
+}
+.glass-card:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,.18);
+}
+.glass-card h3{
+    color:#ff9f1c;
+    margin-bottom:12px;
+}
+
+/* ===== CONTACT ===== */
+.contact{
+    background:rgba(255,255,255,.35);
+    border-radius:30px;
+    max-width:720px;
+    margin:auto;
+    padding:40px;
+    text-align:center;
+    color:#3e2f1c;
+}
+.contact p{
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+/* ===== FLOATING BUTTON ===== */
+.wa-float{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
+    background:linear-gradient(135deg,#00cc66,#33ff99);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:#fff;
+    text-decoration:none;
+    box-shadow:0 0 25px rgba(0,204,102,.5);
+    z-index:999;
+}
+
+.promo-float{
+    position:fixed;
+    bottom:110px;
+    right:25px;
+    background:linear-gradient(135deg,#ff9f1c,#ffb84d);
+    color:#fff;
+    font-weight:700;
+    padding:14px 24px;
+    border-radius:50px;
+    text-decoration:none;
+    box-shadow:0 0 25px rgba(255,159,28,.5);
+    z-index:998;
+    animation:pulse 1.8s infinite;
+}
+@keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.08)}
+    100%{transform:scale(1)}
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:35px;
+    font-size:.9rem;
+    opacity:.75;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Angkringan <span>Mantep</span></h2>
+</nav>
+
+<div class="blur one"></div>
+<div class="blur two"></div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Rasakan Hangat & Nikmat <span>Angkringan Mantep</span></h1>
+        <p>Kopi panas, sate, gorengan, dan menu angkringan favoritmu dengan harga terjangkau.</p>
+        <a href="https://wa.me/6281234567890" class="btn-primary">ðŸ’¬ Pesan Sekarang</a>
+    </div>
+</section>
+
+<!-- MENU -->
+<section class="section">
+    <h2>Menu <span>Andalan</span></h2>
+    <div class="glass-grid">
+        <div class="glass-card"><h3>Kopi Susu</h3><p>Kopi panas creamy khas angkringan</p></div>
+        <div class="glass-card"><h3>Sate Usus</h3><p>Lumer dan pedas mantap</p></div>
+        <div class="glass-card"><h3>Gorengan</h3><p>Tempe, tahu, pisang goreng fresh</p></div>
+        <div class="glass-card"><h3>Nasi Kucing</h3><p>Harga hemat, rasa nikmat</p></div>
+    </div>
+</section>
+
+<!-- PROMO -->
+<section class="section">
+    <h2>Promo <span>Spesial</span></h2>
+    <div class="glass-grid">
+        <div class="glass-card">ðŸ”¥ Diskon 20% untuk pembelian kopi + gorengan</div>
+        <div class="glass-card">ðŸŽ Gratis teh manis setiap pembelian nasi kucing â‰¥ 5 porsi</div>
+    </div>
+</section>
+
+<!-- TRUST / TESTIMONIAL -->
+<section class="section">
+    <h2>Pelanggan <span>Puas</span></h2>
+    <div class="glass-grid">
+        <div class="glass-card">"Angkringan paling enak di kota! Kopi mantap." â€“ Dika</div>
+        <div class="glass-card">"Sate ususnya top! Harga ramah." â€“ Rina</div>
+        <div class="glass-card">"Gorengan fresh, cocok buat ngemil malam." â€“ Budi</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+    <div class="contact">
+        <p><strong>ðŸ“ Alamat:</strong> Jl. Angkringan No.45, Kota Anda</p>
+        <p><strong>ðŸ“ž WhatsApp:</strong> 0812-3456-7890</p>
+        <p><strong>ðŸ“· Instagram:</strong> @angkringanmantep</p>
+    </div>
+</section>
+
+<footer>
+    Â© 2026 Angkringan Mantep â€¢ Nikmat & Hangat â˜•ðŸ´
+</footer>
+
+<!-- FLOATING BUTTON -->
+<a href="https://wa.me/6281234567890" class="wa-float">ðŸ’¬</a>
+<a href="https://wa.me/6281234567890?text=Halo%20admin,%20saya%20ingin%20klaim%20promo%20diskon" class="promo-float">ðŸ”¥ Promo 20%</a>
+
+</body>
+</html>
